@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="ALGOMIND | Component Anomaly Detection", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="CODE.KAISEN | Component Anomaly Detection", page_icon="⚡", layout="wide")
 
-st.title("ALGOMIND — Component Anomaly Detection")
+st.title("CODE.KAISEN — Component Anomaly Detection")
 st.caption("AI-assisted burn-in & screening analysis • SIH PS 26170 • Prototype MVP")
 
 @st.cache_data
@@ -123,7 +123,7 @@ with tab2:
     st.metric("Components flagged for review", len(flagged))
     st.dataframe(flagged, use_container_width=True, hide_index=True)
     st.download_button("Download flagged components", flagged.to_csv(index=False).encode(),
-                       "ALGOMIND_flagged_components.csv", "text/csv")
+                       "CODE.KAISEN_flagged_components.csv", "text/csv")
 
 with tab3:
     selected=st.selectbox("Select component",summary.component_id.tolist())
@@ -154,8 +154,8 @@ with tab4:
     st.line_chart(analyzed[analyzed.component_id==comp].set_index("time_min")[[metric]])
 
 with tab5:
-    st.download_button("Download screening report",summary.to_csv(index=False).encode(),"ALGOMIND_screening_report.csv","text/csv")
-    st.download_button("Download analyzed readings",analyzed.to_csv(index=False).encode(),"ALGOMIND_analyzed_readings.csv","text/csv")
+    st.download_button("Download screening report",summary.to_csv(index=False).encode(),"CODE.KAISEN_screening_report.csv","text/csv")
+    st.download_button("Download analyzed readings",analyzed.to_csv(index=False).encode(),"CODE.KAISEN_analyzed_readings.csv","text/csv")
 
 st.divider()
-st.caption("ALGOMIND prototype • Final screening decisions remain with the engineer.")
+st.caption("CODE.KAISEN prototype • Final screening decisions remain with the engineer.")
