@@ -1,4 +1,4 @@
-# ALGOMIND — Component Anomaly Detection MVP
+# CODE.KAISEN — Component Anomaly Detection MVP
 
 SIH PS 26170: AI Driven Anomaly Detection in Component Burn-In and Screening.
 
