@@ -38,6 +38,36 @@ The MVP uses a lightweight, explainable approach:
 
 The MVP intentionally avoids SciPy and scikit-learn dependencies.
 
+## Architecture
+
+```text
+CSV / Demo Data
+      │
+      ▼
+Data Validation & Cleaning
+      │
+      ▼
+Per-Component Feature Extraction
+      │
+      ├── Temperature change / rate
+      ├── Current change / rate
+      └── Voltage variation / rate
+      │
+      ▼
+Robust Multi-Parameter Scoring
+      │
+      ▼
+90th-Percentile Screening Threshold
+      │
+      ├── Normal
+      └── Potential anomaly → Engineer review
+      │
+      ▼
+Interactive Streamlit Dashboard
+      │
+      └── CSV reports / analyzed readings
+```
+
 ## CSV Format
 
 Required columns:
@@ -71,6 +101,10 @@ python -m streamlit run app.py
 Deployed as a Streamlit application on Render.
 
 The Render service is configured for automatic deployment from the `main` branch.
+
+## Validation Note
+
+The repository contains a deterministic demo dataset and an interactive upload path. The live deployment should be treated as a prototype demonstration rather than a production component-screening system.
 
 ## Disclaimer
 
