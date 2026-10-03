@@ -2,6 +2,11 @@
 
 SIH PS 26170: AI Driven Anomaly Detection in Component Burn-In and Screening.
 
+## Working Links
+
+- **Live Demo:** https://anomaly-detection-xxmd.onrender.com
+- **GitHub Repository:** https://github.com/ayushkushwaha020/ANOMALY-DETECTION
+
 This Streamlit prototype analyzes burn-in readings using temperature, current, voltage, and time-trend features. It flags unusual behavior for engineer review; a flag is not a confirmation of component failure.
 
 ## Run locally
@@ -23,4 +28,4 @@ Robust statistical deviation (median/MAD) plus time-trend features across multip
 
 ## Deployment
 
-This repository is intended to be deployed with Streamlit Community Cloud using `app.py` as the main file.
+Deployed as a Streamlit application on Render. The service is configured for automatic deployment from the `main` branch.
